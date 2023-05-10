@@ -56,5 +56,3 @@ annee = 2020
 nb_roues = 2
 cylindree = 300
 """
-
-
