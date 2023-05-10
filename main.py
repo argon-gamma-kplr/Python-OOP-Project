@@ -1,3 +1,4 @@
-from operation.somme import addition
+import operation
+from operation import somme
 
-print(addition(2,4))
+print(somme.addition(2,4))
