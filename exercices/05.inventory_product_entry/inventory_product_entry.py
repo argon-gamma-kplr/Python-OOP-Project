@@ -15,6 +15,11 @@ class InventoryProductEntry:
         la variable 'expenses' qui stocke le total des dépenses pour restocker le produit
         
         """
+        self.sales = 0
+        self.expenses = 0
+        self.quantity = quantity
+        self.product = product
+
 
     #Méthode Sell
     """
@@ -25,17 +30,25 @@ class InventoryProductEntry:
     def sell(self, quantity):
         #Avant de mettre à jour l'état du stocke du produit, on doit vérifier si on a déjà une quantité suffisante à vendre.
         """
-        En utilisant des conditions, vérifier: 
-
         SI la quantité en stock est inférieure à la quantité demandée:
             Afficher "Le stock du produit [nom du produit] est insuffisant."
             Retourner Faux
+        
+        
         SINON:
             Réduire la quantité en stock par la quantité demandée
             Ajouter le revenue total de la vente à la variable 'sales' en multipliant la quantité vendue par le prix du produit
             Retourner Vrai
         
         """
+
+        if quantity < self.quantity:
+            print(f'Le stock du produit {product} est insuffisant')
+            return False
+        else:
+            self.quantity=self.quantity-quantity
+            self.sales=quantity*product.price
+            return True
     
     #Méthode Restock
     """
@@ -47,7 +60,7 @@ class InventoryProductEntry:
         Ajouter la quantité reçue à la quantité en stock
         Ajouter le coût total de la nouvelle quantité reçue  à la variable 'expenses' en multipliant la quantité reçue par le coût du produit
         """
-
+        self
     #Méthode repr
     """
     La méthode repr est utilisée pour fournir une représentation en chaîne de caractères de l'objet InventoryProductEntry, 
