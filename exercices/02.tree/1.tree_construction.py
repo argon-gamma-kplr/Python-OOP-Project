@@ -24,16 +24,15 @@ my_dict = {
         "souscle3": "valeur3"
     },
     "cle2": "valeur4",
-    "cle3": {
-        "souscle4": "valeur5"
-    }
+    "cle3": {"souscle4": "valeur5"},
+    "cle4": 'test'
 }
 
 # Créer un nouvel arbre
 my_tree = Tree()
 
 # Créer le noeud racine pour l'arbre
-my_tree.create_node(tag="Racine", identifier="racine")
+my_tree.create_node(tag="Debut de l'arbre", identifier="racine")
 
 # Créer la structure de l'arbre à partir du dictionnaire
 create_tree_from_dict(my_tree, "racine", my_dict)

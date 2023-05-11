@@ -7,5 +7,4 @@ def factoriel(n):
   else:
     return 1
 
-
-factoriel(5)
+print(factoriel(8))
