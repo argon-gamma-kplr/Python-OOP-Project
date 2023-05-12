@@ -102,7 +102,7 @@ def write_content(content,filename):
 def main_function():
      """main function"""
      class_def = generate_class_hierarchy(json_dict)
-     write_content(class_def,'product_classes.py"')
+     write_content(class_def,'product_classes.py')
      print(class_def)
 
 if __name__ == '__main__':

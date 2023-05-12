@@ -5,15 +5,15 @@ class Product:
 		self.marque = marque
 		self.name=type(self).__name__
 
-class Biens Consommation(Product):
+class Biens_Consommation(Product):
 	def __init__(self, cost, price, marque):
 		super().__init__(cost, price, marque)
 
-class Articles Menagers(Biens Consommation):
+class Articles_Menagers(Biens_Consommation):
 	def __init__(self, cost, price, marque):
 		super().__init__(cost, price, marque)
 
-class Meubles(Articles Menagers):
+class Meubles(Articles_Menagers):
 	def __init__(self, materiau, couleur, dimensions, cost, price, marque):
 		super().__init__(cost, price, marque)
 		self.materiau = materiau
@@ -32,42 +32,42 @@ class Table(Meubles):
 	def __init__(self, materiau, couleur, dimensions, cost, price, marque):
 		super().__init__(materiau, couleur, dimensions, cost, price, marque)
 
-class Appareils Electromenagers(Articles Menagers):
+class Appareils_Electromenagers(Articles_Menagers):
 	def __init__(self, capacite, cost, price, marque):
 		super().__init__(cost, price, marque)
 		self.capacite = capacite
 
-class Refrigerateur(Appareils Electromenagers):
+class Refrigerateur(Appareils_Electromenagers):
 	def __init__(self, efficacite, capacite, cost, price, marque):
 		super().__init__(capacite, cost, price, marque)
 		self.efficacite = efficacite
 
-class Lave-vaisselle(Appareils Electromenagers):
+class Lave_vaisselle(Appareils_Electromenagers):
 	def __init__(self, programme, capacite, cost, price, marque):
 		super().__init__(capacite, cost, price, marque)
 		self.programme = programme
 
-class Lave-linge(Appareils Electromenagers):
+class Lave_linge(Appareils_Electromenagers):
 	def __init__(self, programme, capacite, cost, price, marque):
 		super().__init__(capacite, cost, price, marque)
 		self.programme = programme
 
-class Ustensiles Cuisine(Articles Menagers):
+class Ustensiles_Cuisine(Articles_Menagers):
 	def __init__(self, materiaux, cost, price, marque):
 		super().__init__(cost, price, marque)
 		self.materiaux = materiaux
 
-class Casserole(Ustensiles Cuisine):
+class Casserole(Ustensiles_Cuisine):
 	def __init__(self, diametre, materiaux, cost, price, marque):
 		super().__init__(materiaux, cost, price, marque)
 		self.diametre = diametre
 
-class Batterie Cuisine(Ustensiles Cuisine):
+class Batterie_Cuisine(Ustensiles_Cuisine):
 	def __init__(self, nombre_pieces, materiaux, cost, price, marque):
 		super().__init__(materiaux, cost, price, marque)
 		self.nombre_pieces = nombre_pieces
 
-class Habillement(Biens Consommation):
+class Habillement(Biens_Consommation):
 	def __init__(self, cost, price, marque):
 		super().__init__(cost, price, marque)
 

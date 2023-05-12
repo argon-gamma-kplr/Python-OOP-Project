@@ -1,6 +1,9 @@
 # Vous allez créer une classe InventoryProductEntry qui a pour role 
 # de représenter une entrée d'inventaire pour un produit spécifique.
-from product_classes import prduct
+import sys
+sys.path.extend(['.','..'])
+
+from product_classes import Product
 
 
 class InventoryProductEntry:
@@ -72,4 +75,8 @@ class InventoryProductEntry:
     """
     def __repr__(self):
         # Retourner une chaîne de caractères formatée contenant le nom du produit, la marque, la quantité en stock et le prix du produit.
-        print(f('le nom du produit est {self.product}, de la marque {self.product.marque}, la quantité restante est de {self.quantity} articles et le prix du produit est {self.product.price}'))
+        return f'le nom du produit est {self.product.name}, de la marque {self.product.marque}, la quantité restante est de {self.quantity} articles et le prix du produit est {self.product.price}'
+
+from product_classes import Biens_Consommation
+a=InventoryProductEntry(Biens_Consommation(1,1,1),10)
+print(repr(a))

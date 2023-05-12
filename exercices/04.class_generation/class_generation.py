@@ -21,7 +21,7 @@ def generate_class_def(nom_classe: str, attributs: dict, nom_superclasse: str, a
     args_constructeur = [] # une liste qui stocke les noms des attributs qui seront utilisés pour créer le constructeur
     definition_constructeur = "" # une chaîne de caractères qui stocke le code qui sera utilisé pour initialiser les attributs de la classe
     has_attributs = False # un booléen qui vérifie si la classe a des attributs ou non
-    modele_classe = f"class {nom_classe}" # une chaîne de caractères qui stocke la définition de base de la classe
+    modele_classe = f"class {nom_classe.replace(' ','_').replace('-','_')}" # une chaîne de caractères qui stocke la définition de base de la classe
 
     """
     Si la classe a une superclasse, celle-ci est spécifiée dans la définition. 
@@ -29,7 +29,7 @@ def generate_class_def(nom_classe: str, attributs: dict, nom_superclasse: str, a
     """
     # Gestion de la superclasse
     if nom_superclasse: # si la classe a une superclasse
-        modele_classe += f"({nom_superclasse})" # ajouter la superclasse à la définition de la classe
+        modele_classe += f"({nom_superclasse.replace(' ','_').replace('-','_')})" # ajouter la superclasse à la définition de la classe
 
     modele_classe += ":\n" # ajouter une nouvelle ligne à la définition de la classe
     """
